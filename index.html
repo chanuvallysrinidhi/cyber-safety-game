@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>cyber sprint</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="screen active" id="start">
+      <div class="card">
+         <h1>🛡️ Cyber Safety Game</h1>
+         <p>Play, learn & stay safe online</p>
+         <button onclick="startGame()">Start Game</button>
+      </div>
+   </div>
+
+   <div class="screen" id="dashboard">
+      <div class="card">
+         <h2>Missions</h2>
+         <p>✅ Safe Score: <span id="safeScore">0</span></p>
+         <p>❌ Wrong Choices: <span id="wrongScore">0</span></p>
+
+         <button onclick="go('m1')">Mission 1: OTP Scam</button>
+         <button onclick="go('m2')">Mission 2: Fake Link</button>
+         <button onclick="go('m3')">Mission 3: KYC Call</button>
+
+         <br><br>
+         <button onclick="finishGame()">Finish Game</button>
+      </div>
+   </div>
+
+   <div class="screen" id="m1">
+      <div class="card">
+         <h2>Mission 1: OTP Scam</h2>
+         <p>A stranger asks for your OTP.</p>
+         <button class="bad" onclick="wrong()">Share OTP</button>
+         <button class="good" onclick="safe()">Do NOT Share</button>
+      </div>
+   </div>
+
+   <div class="screen" id="m2">
+      <div class="card">
+         <h2>Mission 2: Fake Link</h2>
+         <p>You receive a prize link from unknown number.</p>
+         <button class="bad" onclick="wrong()">Click Link</button>
+         <button class="good" onclick="safe()">Ignore & Report</button>
+      </div>
+   </div>
+
+   <div class="screen" id="m3">
+      <div class="card">
+         <h2>Mission 3: KYC Call</h2>
+         <p>Caller asks for urgent KYC update.</p>
+         <button class="bad" onclick="wrong()">Give Details</button>
+         <button class="good" onclick="safe()">Hang Up</button>
+      </div>
+   </div>
+
+   <div class="screen" id="end">
+      <div class="card">
+         <h2>Game Summary</h2>
+         <p>Safe Score: <span id="finalSafe"></span></p>
+         <p>Wrong Choices: <span id="finalWrong"></span></p>
+         <button onclick="location.reload()">Play Again</button>
+      </div>
+   </div>
+
+   <div class="screen" id="reward">
+      <div class="card">
+         <h1>🎁 Congratulations!</h1>
+         <p>You scored <b id="finalScore"></b> points</p>
+
+         <h3 id="giftText"></h3>
+
+         <hr>
+
+         <h2>📜 Certificate</h2>
+         <p>This certifies that</p>
+         <h3 id="playerName"></h3>
+         <p>has completed Cyber Safety Awareness Game</p>
+
+         <button onclick="downloadCertificate()">Download Certificate</button>
+         <button onclick="location.reload()">Play Again</button>
+      </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
+<button onclick="restartGame()">Play Again</button>
