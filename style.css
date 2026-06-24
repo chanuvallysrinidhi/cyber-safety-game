@@ -1,0 +1,142 @@
+body {
+   margin: 0;
+   font-family: "Segoe UI", Arial, sans-serif;
+   color: #ffffff;
+   text-align: center;
+
+   /* Cyber gaming background */
+   background: radial-gradient(circle at top, #0ff 0%, transparent 40%),
+      radial-gradient(circle at bottom, #ff00ff 0%, transparent 40%),
+      linear-gradient(135deg, #05010f, #09001a, #020010);
+   background-size: cover;
+   animation: bgPulse 8s ease-in-out infinite;
+   overflow-x: hidden;
+}
+
+@keyframes bgPulse {
+   0% {
+      filter: brightness(1);
+   }
+   50% {
+      filter: brightness(1.2);
+   }
+   100% {
+      filter: brightness(1);
+   }
+}
+
+/* ===== SCREEN CONTROL ===== */
+.screen {
+   display: none;
+   padding: 70px 20px;
+}
+
+.active {
+   display: block;
+   animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+      transform: scale(0.95);
+   }
+   to {
+      opacity: 1;
+      transform: scale(1);
+   }
+}
+
+/* ===== CARD ===== */
+.card {
+   background: rgba(10, 5, 40, 0.85);
+   padding: 30px;
+   border-radius: 18px;
+   max-width: 620px;
+   margin: auto;
+
+   /* Neon glow */
+   box-shadow: 0 0 15px #00f0ff, 0 0 30px rgba(0, 255, 255, 0.4);
+
+   backdrop-filter: blur(10px);
+}
+
+/* ===== HEADINGS ===== */
+h1,
+h2 {
+   text-shadow: 0 0 10px #00f0ff, 0 0 25px rgba(0, 255, 255, 0.8);
+}
+
+h3 {
+   color: #ff00ff;
+   text-shadow: 0 0 15px #ff00ff;
+}
+
+/* ===== BUTTONS ===== */
+button {
+   padding: 15px 28px;
+   margin: 12px;
+   font-size: 16px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   border-radius: 14px;
+   border: 2px solid transparent;
+   cursor: pointer;
+
+   background: linear-gradient(145deg, #0ff, #0066ff);
+   color: #020010;
+
+   box-shadow: 0 0 12px #00f0ff, inset 0 0 8px rgba(255, 255, 255, 0.6);
+
+   transition: all 0.25s ease;
+}
+
+button:hover {
+   transform: scale(1.12);
+   box-shadow: 0 0 25px #00f0ff, 0 0 45px rgba(0, 255, 255, 0.8);
+}
+
+/* ===== SAFE / GOOD ===== */
+.good {
+   background: linear-gradient(145deg, #00ff88, #00cc66);
+   color: #002010;
+   box-shadow: 0 0 20px #00ff88;
+}
+
+/* ===== BAD / WRONG ===== */
+.bad {
+   background: linear-gradient(145deg, #ff0055, #cc0033);
+   color: #fff;
+   box-shadow: 0 0 20px #ff0055;
+}
+
+/* ===== FEEDBACK ===== */
+#feedback h2 {
+   color: #00ffcc;
+}
+
+#feedback p {
+   font-size: 18px;
+   line-height: 1.5;
+}
+
+/* ===== SCORE TEXT ===== */
+p span {
+   font-weight: bold;
+   color: #00ffcc;
+   text-shadow: 0 0 10px #00ffcc;
+}
+
+/* ===== REWARD SCREEN ===== */
+#reward h1 {
+   color: #00ffcc;
+   text-shadow: 0 0 20px #00ffcc, 0 0 40px rgba(0, 255, 255, 0.9);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+   button {
+      width: 90%;
+      margin: 10px auto;
+   }
+}
